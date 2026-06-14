@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>MusicBox Radio Greece Animation</title>
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        /* Το "Flash" Banner */
+        .flash-container {
+            position: relative;
+            width: 600px;
+            height: 200px;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border: 4px solid #00fff5;
+            box-shadow: 0 0 20px #00fff5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Κινούμενο Κείμενο */
+        .animated-text {
+            color: #fff;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5, 0 0 40px #00fff5;
+            animation: pulse 1.5s infinite alternate, float 3s ease-in-out infinite;
+        }
+
+        /* Εφέ παλμού (Glow) */
+        @keyframes pulse {
+            from {
+                text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5, 0 0 40px #00fff5;
+                transform: scale(1);
+            }
+            to {
+                text-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f, 0 0 60px #ff007f;
+                color: #ffe3ed;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Εφέ κίνησης πάνω-κάτω */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flash-container">
+        <div class="animated-text">MUSICBOX RADIOGREECE</div>
+    </div>
+
+</body>
+</html>
